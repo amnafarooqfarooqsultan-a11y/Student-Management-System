@@ -1,0 +1,578 @@
+/* Teacher Profile Card */
+.teacher-card {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Show Card on Hover */
+.teacher-dropdown:hover .teacher-card {
+  display: block;
+}
+
+/* Teacher Profile Image */
+.teacher-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Teacher Name */
+.teacher-card h5 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Teacher Details */
+.teacher-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Navbar Position */
+.teacher-dropdown {
+  position: relative;
+}
+/* Navbar Background */
+.custom-navbar {
+  background-color: #d6e0ea;
+}
+
+/* Navbar Text */
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #20364b !important;
+}
+
+/* Navbar Hover */
+.custom-navbar .nav-link:hover {
+  color: #0b1f33 !important;
+}
+
+.theme-btn {
+  background-color: #d6eaf8;
+  border: 1px solid #aed6f1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.theme-btn span {
+  color: #5dade2;
+  font-size: 25px;
+}
+
+.theme-btn:hover {
+  background-color: #aed6f1;
+}
+
+/* Student Records Header */
+.card-header {
+  background-color: #d6e0ea !important;
+  color: #20364b;
+}
+/* Table Borders */
+.table {
+  border-color: #c2cfdc;
+}
+
+/* Row Hover */
+.table-hover tbody tr:hover {
+  background-color: #e4ebf2;
+}
+
+/* Table Heading Background */
+#students .table thead th {
+  background-color: #d6e0ea !important;
+  color: #20364b !important;
+  font-weight: 600;
+  border-color: #c2cfdc;
+}
+
+/* Table Data Text */
+#students .table tbody td {
+  color: #20364b;
+  border-color: #c2cfdc;
+}
+
+/* Table Hover */
+#students .table-hover tbody tr:hover > * {
+  background-color: #e4ebf2 !important;
+  color: #20364b !important;
+}
+
+/* Dark Mode Table Heading */
+body.dark-mode #students .table thead th {
+  background-color: #263445 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Dark Mode Table Text */
+body.dark-mode #students .table tbody td {
+  color: #f1f5f9;
+  border-color: #455468;
+}
+
+/* Dashboard Cards */
+#home .row.g-3 .card {
+  background-color: #d6e0ea;
+  color: #20364b;
+  border: 1px solid #c2cfdc;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(32, 54, 75, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Card Headings and Numbers */
+#home .row.g-3 .card h5,
+#home .row.g-3 .card h2 {
+  color: #20364b;
+}
+
+/* Card Hover Effect */
+#home .row.g-3 .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(32, 54, 75, 0.2);
+}
+
+/* Admin Panel Heading */
+#home > .d-flex h2 {
+  color: #20364b;
+}
+
+/* Admin Panel Description */
+#home > .d-flex p {
+  color: #52677d !important;
+}
+
+/* Dashboard Cards - Dark Mode */
+body.dark-mode #home .row.g-3 .card {
+  background-color: #263445 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468;
+}
+
+/* Card Text - Dark Mode */
+body.dark-mode #home .row.g-3 .card h5,
+body.dark-mode #home .row.g-3 .card h2 {
+  color: #f1f5f9 !important;
+}
+
+/* Card Hover - Dark Mode */
+body.dark-mode #home .row.g-3 .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Admin Panel - Dark Mode */
+body.dark-mode #home > .d-flex h2 {
+  color: #f1f5f9;
+}
+/* Dark Mode Navbar - Fixed Text Color */
+
+body.dark-mode .custom-navbar .navbar-nav .nav-link,
+body.dark-mode .custom-navbar .navbar-nav .nav-link:hover,
+body.dark-mode .custom-navbar .navbar-nav .nav-link:focus,
+body.dark-mode .custom-navbar .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+}
+
+body.dark-mode #home > .d-flex p {
+  color: #cbd5e1 !important;
+}
+/* Main Body */
+body.dark-mode {
+  background-color: #121820 !important;
+  color: #f1f5f9 !important;
+}
+
+/* All Main Headings and Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode label {
+  color: #f1f5f9;
+}
+
+/* Navbar */
+body.dark-mode .custom-navbar {
+  background-color: #171f2a !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #f1f5f9 !important;
+}
+
+/* Admin Panel Description */
+body.dark-mode .text-muted {
+  color: #b8c5d6 !important;
+}
+
+/* Dashboard Cards */
+body.dark-mode #home .card {
+  background-color: #263445 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+/* Student Records Card Header */
+body.dark-mode #students .card-header {
+  background-color: #263445 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+/* Student Records Main Area */
+body.dark-mode #students .card-body {
+  background-color: #1b2633 !important;
+}
+
+/* Table */
+body.dark-mode .table {
+  background-color: #1b2633 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+/* Table Headings */
+body.dark-mode .table thead th {
+  background-color: #34495e !important;
+  color: #ffffff !important;
+  border-color: #455468 !important;
+}
+
+/* Table Rows */
+body.dark-mode .table tbody tr > * {
+  background-color: #1b2633 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+/* Table Hover */
+body.dark-mode .table-hover tbody tr:hover > * {
+  background-color: #34495e !important;
+  color: #ffffff !important;
+}
+
+/* Search Box and Input Fields */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #263445 !important;
+  color: #ffffff !important;
+  border-color: #52677d !important;
+}
+
+/* Input Placeholder */
+body.dark-mode .form-control::placeholder {
+  color: #b8c5d6 !important;
+}
+
+/* Modal */
+body.dark-mode .modal-content {
+  background-color: #1b2633 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: #455468 !important;
+}
+
+/* Teacher Profile Card */
+body.dark-mode .teacher-card {
+  background-color: #263445 !important;
+  color: #f1f5f9 !important;
+  border-color: #455468 !important;
+}
+
+body.dark-mode .teacher-card p,
+body.dark-mode .teacher-card h5 {
+  color: #f1f5f9 !important;
+}
+
+/* Dashboard Card Hover */
+body.dark-mode #home .row.g-3 .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Close Button in Modal */
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+/* LIGHT MODE BUTTONS */
+/* Add Student Button */
+body:not(.dark-mode) .btn-primary {
+  background-color: #526d82 !important;
+  border-color: #526d82 !important;
+  color: #ffffff !important;
+}
+
+/* Edit Button */
+body:not(.dark-mode) .btn-warning {
+  background-color: #d6e0ea !important;
+  border-color: #c2cfdc !important;
+  color: #20364b !important;
+}
+
+/* Delete Button */
+body:not(.dark-mode) .btn-danger {
+  background-color: #526d82 !important;
+  border-color: #526d82 !important;
+  color: #ffffff !important;
+}
+
+/* DARK MODE */
+
+/* Add Student Button */
+body.dark-mode .btn-primary {
+  background-color: #34495e !important;
+  border-color: #52677d !important;
+  color: #f1f5f9 !important;
+}
+
+/* Edit Button */
+body.dark-mode .btn-warning {
+  background-color: #40566d !important;
+  border-color: #607a94 !important;
+  color: #ffffff !important;
+}
+
+/* Delete Button */
+body.dark-mode .btn-danger {
+  background-color: #263445 !important;
+  border-color: #607a94 !important;
+  color: #f1f5f9 !important;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+body:not(.dark-mode) .btn-primary:hover,
+body:not(.dark-mode) .btn-danger:hover {
+  background-color: #40576a !important;
+}
+
+body:not(.dark-mode) .btn-warning:hover {
+  background-color: #c2cfdc !important;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-warning:hover,
+body.dark-mode .btn-danger:hover {
+  background-color: #526d82 !important;
+  border-color: #789ab5 !important;
+}
+
+/* School Announcements */
+
+.announcements-section {
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.section-title {
+  color: #20364b;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.announcement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  height: 100%;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d6e0ea;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(32, 54, 75, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(32, 54, 75, 0.12);
+}
+
+.announcement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  background-color: #d6eaf8;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.announcement-content h5 {
+  color: #20364b;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.announcement-date {
+  color: #526d82;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.announcement-content p {
+  color: #5d6d7e;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* School Footer */
+
+.school-footer {
+  background-color: #d6e0ea;
+  color: #20364b;
+  padding: 30px 0 15px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.footer-brand h4 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.footer-brand p {
+  color: #526d82;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #20364b;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #526d82;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #b8c8d8;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #526d82;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+/* Dark Mode */
+
+body.dark-mode .section-title {
+  color: #f1f5f9;
+}
+
+body.dark-mode .announcement-card {
+  background-color: #263445;
+  border-color: #405166;
+}
+
+body.dark-mode .announcement-content h5 {
+  color: #f1f5f9;
+}
+
+body.dark-mode .announcement-content p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .announcement-date {
+  color: #a9cce3;
+}
+
+body.dark-mode .announcement-icon {
+  background-color: #34495e;
+}
+
+body.dark-mode .school-footer {
+  background-color: #171f2a;
+  color: #f1f5f9;
+}
+
+body.dark-mode .footer-brand p,
+body.dark-mode .footer-bottom p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .footer-links a {
+  color: #f1f5f9;
+}
+
+body.dark-mode .footer-links a:hover {
+  color: #a9cce3;
+}
+
+body.dark-mode .footer-bottom {
+  border-top-color: #405166;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .announcement-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    gap: 16px;
+  }
+}

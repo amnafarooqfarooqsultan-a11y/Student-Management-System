@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- nav  -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aurelith Academy</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#schoolNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="schoolNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#students">Students</a>
+                    </li>
+
+                    <!-- Teachers Navbar Dropdown -->
+                    <li class="nav-item teacher-dropdown">
+
+                        <!-- Teachers Link -->
+                        <a class="nav-link" href="#teacher">
+                            Teachers
+                        </a>
+
+                        <!-- Teacher Profile Card -->
+                        <div class="teacher-card" id="teacher">
+                            <img src="images/profile.jpg" alt="">
+                            <h5>Ms. Ayesha Khan</h5>
+
+                            <p><strong>Teacher ID:</strong> T-101</p>
+
+                            <p><strong>Subject:</strong> Mathematics</p>
+
+                            <p><strong>Assigned Class:</strong> Class 9</p>
+
+                            <p><strong>Email:</strong> ayesha@lumora.example</p>
+
+                            <p>
+                                <strong>Status:</strong>
+                                <span class="badge bg-success">Active</span>
+                            </p>
+
+                        </div>
+
+                    </li>
+                    <!-- Light/Dark Mode Switch -->
+
+                    <button id="themeToggle" class="theme-btn" type="button">
+                        <span class="moon-icon">☾</span>
+                        <span class="sun-icon">☀</span>
+                    </button>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Container -->
+    <div class="container-fluid p-4" id="home">
+
+        <!-- Page Heading -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2>Admin Panel</h2>
+                <p class="text-muted">Student & Academic Management Portal</p>
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">
+                + Add Student
+            </button>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="row g-3 mb-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card text-bg-primary shadow-sm">
+                    <div class="card-body">
+                        <h5>Total Students</h5>
+                        <h2 id="totalStudents">0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3" id="teachers">
+                <div class="card text-bg-success shadow-sm">
+                    <div class="card-body">
+                        <h5>Present Today</h5>
+                        <h2 id="presentStudents">25</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3" id="attendance">
+                <div class="card text-bg-warning shadow-sm">
+                    <div class="card-body">
+                        <h5>On Leave</h5>
+                        <h2 id="leaveStudents">0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card text-bg-danger shadow-sm">
+                    <div class="card-body">
+                        <h5>Absent Today</h5>
+                        <h2 id="absentStudents">0</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Students Section -->
+        <div class="card shadow-sm" id="students">
+            <div class="card-header  d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Student Records</h5>
+                <input type="search" id="searchStudent" class="form-control w-50" placeholder="Search student...">
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Student Modal -->
+    <div class="modal fade" id="studentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Student</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addBtn"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="studentForm">
+                        <div class="mb-3">
+                            <label class="form-label">Student ID</label>
+                            <input type="text" id="studentId" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Student Name</label>
+                            <input type="text" id="studentName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Class</label>
+                            <select id="studentClass" class="form-select" required>
+                                <option value="">Select Class</option>
+                                <option>Class 9</option>
+                                <option>Class 10</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="studentEmail" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100" id="submitBtn">
+                            Save Student
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- School Announcements Section -->
+    <section id="announcements" class="announcements-section container my-5">
+
+        <h2 class="section-title">School Announcements</h2>
+
+        <div class="row g-4">
+
+            <!-- Mid-Term Examination -->
+            <div class="col-md-6">
+                <div class="announcement-card">
+                    <div class="announcement-icon">📚</div>
+
+                    <div class="announcement-content">
+                        <span class="announcement-date">October 28, 2026</span>
+
+                        <h5>Mid-Term Examinations</h5>
+
+                        <p>
+                            Mid-term examinations will begin next week.
+                            Students should prepare according to the timetable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parent-Teacher Meeting -->
+            <div class="col-md-6">
+                <div class="announcement-card">
+                    <div class="announcement-icon">👨‍👩‍👧‍👦</div>
+
+                    <div class="announcement-content">
+                        <span class="announcement-date">October 30, 2026</span>
+
+                        <h5>Parent-Teacher Meeting</h5>
+
+                        <p>
+                            Parents are invited to discuss student progress
+                            and academic performance with their teachers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="school-footer">
+
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <h4>Aurelith Academy</h4>
+                    <p>Student Management System</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#students">Students</a>
+                    <a href="#teachers">Teachers</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Aurelith Academy.
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
